@@ -124,6 +124,10 @@ server {
 
 }
 
+cd /var/www/website/API
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+
 sudo ln -s /etc/nginx/sites-available/website.com /etc/nginx/sites-enabled/website.com
 
 sudo nginx -t
