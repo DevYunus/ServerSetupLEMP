@@ -48,6 +48,8 @@
 1- sudo nano /etc/php/7.1/cli/php.ini
 
 2- cgi.fix_pathinfo=0 (find cgi.fix_pathinfo and change from 1 to 0)
+(or just run this command - sudo sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini
+)
 
 3- sudo systemctl restart php7.1-fpm.service
 ```
